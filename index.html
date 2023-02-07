@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is a swamp</title>
-</head>
-<body>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="swamp.js"></script>
-
-
-    <!--Assets used-->
-    <a-assets>
-        <img id='sol' src="sol.jpg">
-        <img id="sky" src="sky.jpeg" alt="monFond">
-        <a-assets-item id="plantes" src="scene.gltf"></a-assets-item>
-
-    </a-assets>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+</head>
+<body>
+    
 
     <a-scene fog="type: exponential; color: #AAA">
+        <!--Assets used-->
+        <a-assets>
+            <img id='sol' src="assets/sol.jpg">
+            <img id="sky" src="assets/sky.jpeg" alt="monFond">
+            <a-assets-item id="plantes" src="assets/scene.gltf"></a-assets-item>
+        </a-assets>
+
+    
         <!-- Light source (Change if needed)-->
         <a-light type="ambient" color="#445451"></a-light>
         <a-light type="point" intensity="2" position="2 4 4"></a-light>
@@ -32,12 +33,34 @@
         <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15"></a-circle>
 
         <!-- Alley-->
-        
-        <a-entity gltf-model="#plantes" position="0 2 -10"></a-entity>
+
+        <a-entity scale="0.1 0.1 0.1" gltf-model="assets/scene.gltf" position="-1 0.5 3" rotation="0 90 0"></a-entity>
+        <a-entity scale="0.1 0.1 0.1" gltf-model="assets/scene.gltf" position="1 0.5 4" rotation="0 -90 0"></a-entity>
         <a-plane src="#sol" repeat="1 10" position="0 0.5 -10" rotation="-90 0 0" width="2" height="30" shadow></a-plane>
 
     </a-scene>
-
+    <script>
+   
+    let scene = document.querySelector("a-scene");
+    for(let x=0;x<5;x++){
+    let randomnumber = Math.ceil(Math.random()*-38) ;
+    let fleurs = document.createElement('a-entity');
+    fleurs.setAttribute('scale', '0.1 0.1 0.1');
+    fleurs.setAttribute('gltf-model', 'assets/scene.gltf');
+    fleurs.setAttribute('rotation','0 90 0');
+    fleurs.setAttribute('position', `-1 0.5 ${randomnumber}`); 
+    scene.appendChild(fleurs)
+    }   
+    for(let x=0;x<5;x++){
+    let randomnumber = Math.ceil(Math.random()*-38) ;
+    let fleurs = document.createElement('a-entity');
+    fleurs.setAttribute('scale', '0.1 0.1 0.1');
+    fleurs.setAttribute('gltf-model', 'assets/scene.gltf');
+    fleurs.setAttribute('rotation','0 -90 0');
+    fleurs.setAttribute('position', `1 0.5 ${randomnumber}`); 
+    scene.appendChild(fleurs)
+    }  
+    </script>
 
 </body>
 </html>     
