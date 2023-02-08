@@ -14,6 +14,7 @@
     <a-scene fog="type: exponential; color: #AAA">
         <!--Assets used-->
         <a-assets>
+            <!--Alley-->
             <img id='sol' src="assets/sol.jpg">
             <img id="sky" src="assets/sky.jpeg" alt="monFond">
             <a-assets-item id="plantes" src="assets/scene.gltf"></a-assets-item>
@@ -23,20 +24,20 @@
             <a-assets-item id="fleurs" src="assets/fleur.gltf"></a-assets-item>
             <a-assets-item id="trefles" src="assets/trefles.gltf"></a-assets-item>
             <!--Doghouse-->
-            <a-assets-item id="doghouse" src="assets/doghouse0908.gltf"></a-assets-item>
+            <a-assets-item id="doghouse" src="doghouse0908.gltf"></a-assets-item>
 
             <!--boat-->
-            <a-assets-item id="boat" src="assets/boat/scene.gltf"></a-assets-item>
+            <a-assets-item id="boat" src="boat/scene.gltf"></a-assets-item>
 
             <!--Crate-->
-            <a-assets-item id="crate" src="assets/crate/wooden crate.glb"></a-assets-item>
+            <a-assets-item id="crate" src="crate/wooden crate.glb"></a-assets-item>
 
             <!--House-->
-            <a-assets-item id="house" src="assets/medieval_house/scene.gltf"></a-assets-item>
+            <a-assets-item id="house" src="medieval_house/scene.gltf"></a-assets-item>
 
             <!--Ant-->
-            <a-asset-item id="ant-obj" src="assets/formicarufaobjtext/formica rufa.obj"></a-asset-item>
-            <a-asset-item id="ant-mtl" src="assets/formicarufaobjtext/formica rufa.mtl"></a-asset-item>
+            <a-asset-item id="ant-obj" src="formicarufaobjtext/formica rufa.obj"></a-asset-item>
+            <a-asset-item id="ant-mtl" src="formicarufaobjtext/formica rufa.mtl"></a-asset-item>
         </a-assets>
 
     
@@ -56,8 +57,6 @@
         </a-circle>
 
         <!-- Alley-->
-
-        
         <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/grass.gltf"  position="-1 0.5 4"    rotation="0 -90 0"></a-entity>
         <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/scene.gltf"  position="-1 0.5 1"    rotation="0 90 0"></a-entity>
         <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 0"    rotation="0 -90 0"></a-entity>
@@ -73,7 +72,6 @@
         <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="-1 0.5 -21"  rotation="0 -90 0"></a-entity>
         <a-entity scale="0.001 0.001 0.001"  gltf-model="assets/rock.gltf"   position="-1 0.5 -22"  rotation="0 90 0"></a-entity>
         <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 -24"  rotation="0 -90 0"></a-entity>
-
 
         <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="1.2 0.7 4"     rotation="0 -90 0"></a-entity>
         <a-entity scale="0.001 0.001 0.001"  gltf-model="assets/rock.gltf"   position="1 0.5 3"     rotation="0 05 0"></a-entity>
