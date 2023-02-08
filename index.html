@@ -11,22 +11,63 @@
     <script src="swamp.js"></script>
 
 
-    <!--Assets used-->
+    <script>
+        // Example for grid btw
+        /* for (var row = 0; row <= 5; row += 0.5) {
+        for (var col = 0; col <= 5; col += 0.5) {
+          var box = document.createElement("a-box");
+          box.setAttribute("color", "blue")
+          box.setAttribute("scale", "0.1 0.1 0.1")
+          // use the column / row for the position
+          box.setAttribute("position", {
+            x: 2.5 - col, y: 5 - row, z: -2
+          })
+          document.body.appendChild(box);
+            }
+        } */
+    </script>
+
+
+    <!--Assets used (placeholder, we can move them to a separate file and link the path later)-->
     <a-assets>
-        <img id='' src="">
+        <img id='wood' src="wood.png">
+        <img id='foliage' src="foliage.png">
     </a-assets>
 
+    <!-- MAIN SCENE -->
+
     <a-scene>
-        <!-- Light source (Change if needed)-->
+        <!-- Light source (placeholder, we can change if needed)-->
         <a-light type="ambient" color="#445451"></a-light>
         <a-light type="point" intensity="2" position="2 4 4"></a-light>
 
+
         <!-- Sky/Background-->
-        <a-sky color="blue"></a-sky>
+        <!-- <a-sky color="lightblue" ></a-sky> -->
 
 
-        <a-plane position="0 1 -4" rotation="-90 0 0" width="20" height="4" color="#7BC8A4" shadow></a-plane>
-        <a-circle position="0 0 -4"  rotation="-90 0 0" color="##F3D297" radius="20"></a-circle>
+        <!-- Ground and basic borders of the project -->
+        <!-- <a-plane position="0 1 -4" rotation="-90 0 0" width="20" height="4" color="#7BC8A4" shadow></a-plane> -->
+        <!-- The cirle/ aka perimiter in which we add objects -->
+        <!-- <a-circle position="0 0 -4"  rotation="-90 0 0" color="red" radius="20"></a-circle> -->
+        <a-circle position="0 0 0"  rotation="-90 0 0" color="green" radius="20"></a-circle>
+
+        <!-- Trees ligning the edges of the circle/perimiter-->
+
+        <!-- Due positive x (right)-->
+        <a-box src="#wood" position="20 3 -4" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
+        <a-dodecahedron src="#foliage" radius="3" position="20, 6 -4" rotation="0, 120, 0" shadow="" animation="property: object3D.position.x; to: 19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
+        <!-- Due negative x (left)-->
+        <a-box src="#wood" position="-20 3 -4" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
+        <a-dodecahedron src="#foliage" radius="3" position="-20, 6 -4" rotation="0, 120, 0" shadow="" animation="property: object3D.position.x; to: -19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
+
+        <!-- Due negative z (ahead)-->
+        <a-box src="#wood" position="0 3 -20" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
+        <a-dodecahedron src="#foliage" radius="3" position="0, 6 -20" rotation="0, 120, 0" shadow="" animation="property: object3D.position.z; to: -19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
+        <!-- Due positive z (behind)-->
+        <a-box src="#wood" position="0 3 20" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
+        <a-dodecahedron src="#foliage" radius="3" position="0, 6 20" rotation="0, 120, 0" shadow="" animation="property: object3D.position.z; to: 19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
+
 
     </a-scene>
 

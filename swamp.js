@@ -8,3 +8,6 @@ let moteurRendu = new THREE.WebGLRenderer({antialias : true});
 moteurRendu.setSize(wiw,wih);       
 document.body.appendChild(moteurRendu.domElement)
 
+
+
+
