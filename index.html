@@ -22,6 +22,21 @@
             <a-assets-item id="herbes" src="assets/grass.gltf"></a-assets-item>
             <a-assets-item id="fleurs" src="assets/fleur.gltf"></a-assets-item>
             <a-assets-item id="trefles" src="assets/trefles.gltf"></a-assets-item>
+            <!--Doghouse-->
+            <a-assets-item id="doghouse" src="assets/doghouse0908.gltf"></a-assets-item>
+
+            <!--boat-->
+            <a-assets-item id="boat" src="assets/boat/scene.gltf"></a-assets-item>
+
+            <!--Crate-->
+            <a-assets-item id="crate" src="assets/crate/wooden crate.glb"></a-assets-item>
+
+            <!--House-->
+            <a-assets-item id="house" src="assets/medieval_house/scene.gltf"></a-assets-item>
+
+            <!--Ant-->
+            <a-asset-item id="ant-obj" src="assets/formicarufaobjtext/formica rufa.obj"></a-asset-item>
+            <a-asset-item id="ant-mtl" src="assets/formicarufaobjtext/formica rufa.mtl"></a-asset-item>
         </a-assets>
 
     
@@ -33,7 +48,12 @@
        <a-sky src="#sky"></a-sky>
         <!-- Ground-->
         <a-plane color="#07440A" position="0 0 0" rotation="-90 0 0" width="300" height="300" shadow></a-plane>
-        <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15"></a-circle>
+        <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
+            <a-gltf-model scale="1 1 1" src="#doghouse" position="-1 0.5 3" rotation="0 90 0"></a-gltf-modelscale></a-gltf-model>
+            <a-gltf-model scale="1 1 1" src="#crate" position="-1 0.5 3" rotation="0 90 0"></a-gltf-modelscale></a-gltf-model>
+            <a-gltf-model scale="4 4 4" src="#house" position="7.811 0 3.923" rotation="-59.749 -90 -90"></a-gltf-modelscale></a-gltf-model>
+            <a-gltf-model scale="0.01 0.01 0.01" src="#boat" position="-2.950 0.119" rotation="-59.749 -90 -90"></a-gltf-modelscale></a-gltf-model>
+        </a-circle>
 
         <!-- Alley-->
 
