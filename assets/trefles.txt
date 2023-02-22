@@ -1,0 +1,11 @@
+Model Information:
+* title:	Clover Grass
+* source:	https://sketchfab.com/3d-models/clover-grass-beeff00b4496409da82b7c1a9705039e
+* author:	kelvladmail (https://sketchfab.com/kelvladmail)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Clover Grass" (https://sketchfab.com/3d-models/clover-grass-beeff00b4496409da82b7c1a9705039e) by kelvladmail (https://sketchfab.com/kelvladmail) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

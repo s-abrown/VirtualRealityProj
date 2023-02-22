@@ -1,0 +1,11 @@
+Model Information:
+* title:	Mossy Rock
+* source:	https://sketchfab.com/3d-models/mossy-rock-3406cbca74b2468a85188d15ba2d8e86
+* author:	Julyaaa (https://sketchfab.com/Julyaaa)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Mossy Rock" (https://sketchfab.com/3d-models/mossy-rock-3406cbca74b2468a85188d15ba2d8e86) by Julyaaa (https://sketchfab.com/Julyaaa) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

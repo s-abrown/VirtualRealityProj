@@ -5,72 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>This is a swamp</title>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
 </head>
 <body>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="swamp.js"></script>
+    
 
+    <a-scene fog="type: exponential; color: #AAA">
+        <!--Assets used-->
+        <a-assets>
+            <!--Alley-->
+            <img id='sol' src="assets/sol.jpg">
+            <img id="sky" src="assets/sky.jpeg" alt="monFond">
+            <a-assets-item id="plantes" src="assets/scene.gltf"></a-assets-item>
+            <a-assets-item id="pierres" src="assets/rock.gltf"></a-assets-item>
+            <a-assets-item id="pierres_vertes" src="assets/rock_.gltf"></a-assets-item>
+            <a-assets-item id="herbes" src="assets/grass.gltf"></a-assets-item>
+            <a-assets-item id="fleurs" src="assets/fleur.gltf"></a-assets-item>
+            <a-assets-item id="trefles" src="assets/trefles.gltf"></a-assets-item>
+            <!--Doghouse-->
+            <a-assets-item id="doghouse" src="doghouse0908.gltf"></a-assets-item>
 
-    <script>
-        // Example for grid btw
-        /* for (var row = 0; row <= 5; row += 0.5) {
-        for (var col = 0; col <= 5; col += 0.5) {
-          var box = document.createElement("a-box");
-          box.setAttribute("color", "blue")
-          box.setAttribute("scale", "0.1 0.1 0.1")
-          // use the column / row for the position
-          box.setAttribute("position", {
-            x: 2.5 - col, y: 5 - row, z: -2
-          })
-          document.body.appendChild(box);
-            }
-        } */
-    </script>
+            <!--boat-->
+            <a-assets-item id="boat" src="boat/scene.gltf"></a-assets-item>
 
+            <!--Crate-->
+            <a-assets-item id="crate" src="crate/wooden crate.glb"></a-assets-item>
 
-    <!--Assets used (placeholder, we can move them to a separate file and link the path later)-->
-    <a-assets>
-        <img id='wood' src="wood.png">
-        <img id='foliage' src="foliage.png">
-    </a-assets>
+            <!--House-->
+            <a-assets-item id="house" src="medieval_house/scene.gltf"></a-assets-item>
 
-    <!-- MAIN SCENE -->
+            <!--Ant-->
+            <a-asset-item id="ant-obj" src="formicarufaobjtext/formica rufa.obj"></a-asset-item>
+            <a-asset-item id="ant-mtl" src="formicarufaobjtext/formica rufa.mtl"></a-asset-item>
+        </a-assets>
 
-    <a-scene>
-        <!-- Light source (placeholder, we can change if needed)-->
+    
+        <!-- Light source (Change if needed)-->
         <a-light type="ambient" color="#445451"></a-light>
         <a-light type="point" intensity="2" position="2 4 4"></a-light>
 
-
         <!-- Sky/Background-->
-        <!-- <a-sky color="lightblue" ></a-sky> -->
+       <a-sky src="#sky"></a-sky>
+        <!-- Ground-->
+        <a-plane color="#07440A" position="0 0 0" rotation="-90 0 0" width="300" height="300" shadow></a-plane>
+        <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
+            <a-gltf-model scale="1 1 1" src="#doghouse" position="-1 0.5 3" rotation="0 90 0"></a-gltf-modelscale></a-gltf-model>
+            <a-gltf-model scale="1 1 1" src="#crate" position="-1 0.5 3" rotation="0 90 0"></a-gltf-modelscale></a-gltf-model>
+            <a-gltf-model scale="4 4 4" src="#house" position="7.811 0 3.923" rotation="-59.749 -90 -90"></a-gltf-modelscale></a-gltf-model>
+            <a-gltf-model scale="0.01 0.01 0.01" src="#boat" position="-2.950 0.119" rotation="-59.749 -90 -90"></a-gltf-modelscale></a-gltf-model>
+        </a-circle>
 
+        <!-- Alley-->
+        <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/grass.gltf"  position="-1 0.5 4"    rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/scene.gltf"  position="-1 0.5 1"    rotation="0 90 0"></a-entity>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 0"    rotation="0 -90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="-1 0.5 -1"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.001 0.001 0.001"  gltf-model="assets/rock.gltf"   position="-1 0.5 -5"   rotation="0 30 0"></a-entity>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 -7"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/rock_.gltf"  position="-1 0.5 -12"  rotation="0 35 0"></a-entity>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 -13"  rotation="0 -90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="-1 0.5 -14"  rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/scene.gltf"  position="-1 0.5 -15"  rotation="0 90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="-1 0.5 -17"  rotation="0 -90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/rock_.gltf"  position="-1 0.5 -20"  rotation="0 5 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="-1 0.5 -21"  rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.001 0.001 0.001"  gltf-model="assets/rock.gltf"   position="-1 0.5 -22"  rotation="0 90 0"></a-entity>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 -24"  rotation="0 -90 0"></a-entity>
 
-        <!-- Ground and basic borders of the project -->
-        <!-- <a-plane position="0 1 -4" rotation="-90 0 0" width="20" height="4" color="#7BC8A4" shadow></a-plane> -->
-        <!-- The cirle/ aka perimiter in which we add objects -->
-        <!-- <a-circle position="0 0 -4"  rotation="-90 0 0" color="red" radius="20"></a-circle> -->
-        <a-circle position="0 0 0"  rotation="-90 0 0" color="green" radius="20"></a-circle>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="1.2 0.7 4"     rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.001 0.001 0.001"  gltf-model="assets/rock.gltf"   position="1 0.5 3"     rotation="0 05 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="1 0.5 0"     rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="1.2 0.7 -2"    rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/scene.gltf"  position="1 0.5 -7"    rotation="0 -90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/rock_.gltf"  position="1 0.5 -10"   rotation="0 60 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="1 0.5 -11"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="1.2 0.7 -12"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="1 0.5 -15"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.001 0.001 0.001"  gltf-model="assets/rock.gltf"   position="1 0.5 -17"   rotation="0 15 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="1 0.5 -19"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/rock_.gltf"  position="1 0.5 -20"   rotation="0 10 0"></a-entity>
+        <a-entity scale="1 1 1"              gltf-model="assets/grass.gltf"  position="1 0.5 -21"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/scene.gltf"  position="1 0.5 -22"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="1.2 0.7 -24"   rotation="0 -90 0"></a-entity>
 
-        <!-- Trees ligning the edges of the circle/perimiter-->
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -24"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -20.5"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -17"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -14"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -10.5"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -8.5"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -6.7"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -6"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -4.2"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 -1.5"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 0"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 1.8"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 3.2"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 4"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="-0.5 0.5 5"   rotation="0 -90 0"></a-entity>
 
-        <!-- Due positive x (right)-->
-        <a-box src="#wood" position="20 3 -4" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
-        <a-dodecahedron src="#foliage" radius="3" position="20, 6 -4" rotation="0, 120, 0" shadow="" animation="property: object3D.position.x; to: 19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
-        <!-- Due negative x (left)-->
-        <a-box src="#wood" position="-20 3 -4" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
-        <a-dodecahedron src="#foliage" radius="3" position="-20, 6 -4" rotation="0, 120, 0" shadow="" animation="property: object3D.position.x; to: -19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -22"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -17.5"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -15"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -12.5"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -9"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -7.45"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -6.3"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -5.1"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -2"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 -0.4"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 1"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 2.3"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 3.6"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 4.8"   rotation="0 -90 0"></a-entity>
+        <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 5.3"   rotation="0 -90 0"></a-entity>
 
-        <!-- Due negative z (ahead)-->
-        <a-box src="#wood" position="0 3 -20" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
-        <a-dodecahedron src="#foliage" radius="3" position="0, 6 -20" rotation="0, 120, 0" shadow="" animation="property: object3D.position.z; to: -19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
-        <!-- Due positive z (behind)-->
-        <a-box src="#wood" position="0 3 20" rotation="0, 0, 0" color="" width="1" depth="1" height="6" shadow="" ></a-box>
-        <a-dodecahedron src="#foliage" radius="3" position="0, 6 20" rotation="0, 120, 0" shadow="" animation="property: object3D.position.z; to: 19.5; dir: alternate; dur: 1000; loop: true" ></a-dodecahedron>
-
+        <a-entity scale="0.01 0.01 0.01"  gltf-model="assets/rock.gltf"   position="0 0 5"     rotation="0 90 0"></a-entity>
+        <a-plane src="#sol" repeat="1 10" position="0 0.5 -10" rotation="-90 0 0" width="2" height="30" shadow></a-plane>
 
     </a-scene>
+<script>
+    console.clear();
+// hauteur et largeur de la fenêtre
+let wiw = window.innerWidth;
+let wih = window.innerHeight;
+let MaScène = new THREE.Scene();
+let Macamera = new THREE.PerspectiveCamera(75, wiw/wih, 0.1, 1000) // j'ai mis au piff
+let moteurRendu = new THREE.WebGLRenderer({antialias : true});
+moteurRendu.setSize(wiw,wih);       
+document.body.appendChild(moteurRendu.domElement)
 
+</script>
 
 </body>
-</html>
+</html>     
