@@ -1,0 +1,11 @@
+Model Information:
+* title:	Dragonfly
+* source:	https://sketchfab.com/3d-models/dragonfly-3cbbe9177ae24f1a8ca953ca7eb8bb86
+* author:	7SkyArtist (https://sketchfab.com/7SkyArtist)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Dragonfly" (https://sketchfab.com/3d-models/dragonfly-3cbbe9177ae24f1a8ca953ca7eb8bb86) by 7SkyArtist (https://sketchfab.com/7SkyArtist) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

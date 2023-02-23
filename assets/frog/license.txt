@@ -1,0 +1,11 @@
+Model Information:
+* title:	Frog
+* source:	https://sketchfab.com/3d-models/frog-eb219212147f4d84b88f8e103af8ea10
+* author:	Bogdan_Lapitsky (https://sketchfab.com/Bogdan_Lapitsky)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Frog" (https://sketchfab.com/3d-models/frog-eb219212147f4d84b88f8e103af8ea10) by Bogdan_Lapitsky (https://sketchfab.com/Bogdan_Lapitsky) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

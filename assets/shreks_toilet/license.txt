@@ -1,0 +1,11 @@
+Model Information:
+* title:	Shrek's toilet
+* source:	https://sketchfab.com/3d-models/shreks-toilet-ec99a392c7ab40b9a56d421f11362d63
+* author:	DonislavTodorov (https://sketchfab.com/DonislavTodorov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Shrek's toilet" (https://sketchfab.com/3d-models/shreks-toilet-ec99a392c7ab40b9a56d421f11362d63) by DonislavTodorov (https://sketchfab.com/DonislavTodorov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
