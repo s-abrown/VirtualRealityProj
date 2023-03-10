@@ -24,6 +24,15 @@
             <a-assets-item id="fleurs" src="assets/fleur.gltf"></a-assets-item>
             <a-assets-item id="trefles" src="assets/trefles.gltf"></a-assets-item>
 
+            <audio id="etang" src="assets/Sounds/eau.mp3" preload="auto"></audio>
+            <audio id="foret" src="assets/Sounds/forêt.mp3" preload="auto"></audio>
+            <audio id="chien" src="assets/Sounds/chien.mp3" preload="auto"></audio>
+            <audio id="canard" src="assets/Sounds/canard.mp3" preload="auto"></audio>
+            <audio id="grenouilles" src="assets/Sounds/grenouilles.mp3" preload="auto"></audio>
+            <audio id="toilette" src="assets/Sounds/chasse d'eau.mp3" preload="auto"></audio>
+            <audio id="gravier" src="assets/Sounds/Pas sur gravier.mp3" preload="auto"></audio>
+            <audio id="herbe" src="assets/Sounds/pas dans l'herbe.mp3" preload="auto"></audio>
+
             <!--Doghouse-->
             <a-assets-item id="doghouse" src="assets/doghouse0908.gltf"></a-assets-item>
 
@@ -84,6 +93,10 @@
             <a-assets-item id="low_poly_trees" src="assets/low_poly_trees/scene.gltf"></a-assets-item>
         </a-assets>
 
+        <!--A camera -->
+        <a-camera id="camera" postion-player >
+            <a-cursor></a-cursor>
+        </a-camera>
     
         <!-- Light source (Change if needed)-->
         <a-light type="ambient" color="#445451"></a-light>
@@ -92,7 +105,7 @@
         <!-- Sky/Background-->
        <a-sky src="#sky"></a-sky>
         <!-- Ground-->
-        <a-plane color="#07440A" position="0 0 0" rotation="-90 0 0" width="300" height="300" shadow>
+        <a-plane color="#07440A" position="0 0 0" rotation="-90 0 0" width="300" height="300" sound="src:#herbe; refDistance:50; volume:0.2">
             <!-- Oak trees -->
             <a-gltf-model scale="7 7 7" src="#oak_trees" position="20.29132 39.85446 0.13166" rotation="90 0 0" ></a-gltf-model>
             <a-gltf-model scale="7 7 7" src="#oak_trees" position="-20.78867 20.7357 0.01781" rotation="90 0 0" ></a-gltf-model>
@@ -154,14 +167,14 @@
 
             <!--Swamp-->
             <a-circle color="#445451" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
-            <a-circle color="#445451" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
+            <a-circle color="#445451" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
             <a-circle color="#445451" position="0.7514 0.72618 0.009" radius="7" material="" geometry=""></a-circle>
             <a-circle color="#445451" position="-6.5974 4.29488 0.009" radius="7" material="" geometry=""></a-circle>
         
             <!--Doghouse-->
             <a-gltf-model scale="1.2 1.2 1.2" src="#doghouse" position="12.12163 -3.53097 -0.00286" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971"></a-gltf-model>
             <!--Dog-->
-            <a-gltf-model scale="" src="#dog" position="8.55465 -5.00668 1.99409" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971"></a-gltf-model>
+            <a-gltf-model scale="" src="#dog" position="8.55465 -5.00668 1.99409" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971" sound="src: #chien; on :click; volume: 1; refDistance :1"></a-gltf-model>
             <!--Crate-->
             <a-gltf-model scale="0.5 0.5 0.5" src="#crate" position="3.766 1.72878 0.81111" rotation="38.473 90 0"></a-gltf-model>
             <a-gltf-model scale="0.5 0.5 0.5" src="#crate" position="3.766 1.63925 1.80391" rotation="38.473 90 0"></a-gltf-model>
@@ -199,20 +212,20 @@
             <a-gltf-model scale="0.02 0.02 0.02" src="#dragonfly" position="-11.17783 -1.71259 0.43695" rotation="-0.13120733508495852 86.47250931452923 89.37797829363764"></a-gltf-model>
             <!--Log-->
             <a-gltf-model scale="0.6 0.6 0.6" src="#log" position="-11.16841 -1.60571 4.50294" rotation="-28.839830617909985 1.8116925482036632 -93.287">
-                <a-gltf-model scale="0.05 0.05 0.05" src="#frog" position="0.6835 0.15501 -7.98147" rotation="-37.906314768060135 120.86888462961795 86.34875043078097"></a-gltf-model>
+                <a-gltf-model scale="0.05 0.05 0.05" src="#frog" position="0.6835 0.15501 -7.98147" rotation="-37.906314768060135 120.86888462961795 86.34875043078097" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
             </a-gltf-model>
             <!--Frogs-->
-            <a-gltf-model scale="0.05 0.05 0.05" src="#frog" position="3.77552 1.98938 2.29517" rotation="89.293 0 0"></a-gltf-model>
-            <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="11.36502 -0.93098 2.89662" rotation="76.46293663359376 86.46907156775845 86.56704735072582"></a-gltf-model>
-            <a-gltf-model scale="0.015 0.015 0.015" src="#frog" position="12.52109 -3.13779 0.00592" rotation="89.293 0 0"></a-gltf-model>
-            <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-1.29272 -9.07344 0.28161" rotation="69.08896981026005 87.74046491515375 87.88313140614132"></a-gltf-model>
-            <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-0.2021 10.42377 0.26949" rotation="69.08896981026005 87.74046491515375 87.88313140614132"></a-gltf-model>
+            <a-gltf-model scale="0.05 0.05 0.05" src="#frog" position="3.77552 1.98938 2.29517" rotation="89.293 0 0" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
+            <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="11.36502 -0.93098 2.89662" rotation="76.46293663359376 86.46907156775845 86.56704735072582" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
+            <a-gltf-model scale="0.015 0.015 0.015" src="#frog" position="12.52109 -3.13779 0.00592" rotation="89.293 0 0" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
+            <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-1.29272 -9.07344 0.28161" rotation="69.08896981026005 87.74046491515375 87.88313140614132" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
+            <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-0.2021 10.42377 0.26949" rotation="69.08896981026005 87.74046491515375 87.88313140614132" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
             <!--Donkey-->
             <a-gltf-model scale="0.09 0.09 0.09" src="#donkey" position="6.38798 -3.083 0.24272" rotation="85.79183545391382 -71.61571368678699 -66.34622084496881"></a-gltf-model>
             <!--Toilet-->
-            <a-gltf-model src="#toilet" position="0 10.03651 1.0517" rotation="-72.18351486176164 90.00078341694484 89.99963750135457" scale="1.2 1.2 1.2"></a-gltf-model>
+            <a-gltf-model src="#toilet" position="0 10.03651 1.0517" rotation="-72.18351486176164 90.00078341694484 89.99963750135457" scale="1.2 1.2 1.2" sound="src: #toilette; on :click; volume: 1; refDistance :1"></a-gltf-model>
             <!--Animated duck-->
-            <a-gltf-model src="#animated_duck" position="-4.52489 -11.15263 0.03253" scale="0.3 0.3 0.3" rotation="-72.663 -90.00021045914971 -90" animation-mixer></a-gltf-model>
+            <a-gltf-model src="#animated_duck" position="-4.52489 -11.15263 0.03253" scale="0.3 0.3 0.3" rotation="-72.663 -90.00021045914971 -90" animation-mixer sound="src: #canard; on :click; volume: 1; refDistance :1"></a-gltf-model>
         </a-circle>
 
         <!-- Alley-->
@@ -280,8 +293,8 @@
         <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 4.8"   rotation="0 -90 0"></a-entity>
         <a-entity scale="0.002 0.002 0.002"  gltf-model="assets/trefles.gltf"   position="1.5 0.5 5.3"   rotation="0 -90 0"></a-entity>
 
-        <a-entity scale="0.01 0.01 0.01"  gltf-model="assets/rock.gltf"   position="0 0 5"     rotation="0 90 0"></a-entity>
-        <a-plane src="#sol" repeat="1 10" position="0 0.5 -10" rotation="-90 0 0" width="2" height="30" shadow></a-plane>
+        <a-entity scale="0.01 0.01 0.01"  gltf-model="assets/rock.gltf"   position="0 0 5"     rotation="0 90 0" sound="src:#foret; autoplay: true; volume: 4; refDistance :5; loop: true"></a-entity>
+        <a-plane src="#sol" repeat="1 10" position="0 0.5 -10" rotation="-90 0 0" width="2" height="30" sound="src:#gravier; refDistance:10; volume:0.2"></a-plane>
 
     </a-scene>
 <script>
@@ -293,6 +306,23 @@ let Macamera = new THREE.PerspectiveCamera(75, wiw/wih, 0.1, 1000) // j'ai mis a
 let moteurRendu = new THREE.WebGLRenderer({antialias : true});
 moteurRendu.setSize(wiw,wih);       
 document.body.appendChild(moteurRendu.domElement)
+
+AFRAME.registerComponent('postion-player', {
+    tick: function () {
+        let camera_position = this.el.object3D.position;
+        let path_sound  = document.getElementById("path")
+        let grass_sound  = document.getElementById("gros-cercle-vert")
+        if (camera_position.x <= 1 && camera_position.x >= -1 && camera_position.z <= 5 && camera_position.z >= -25 ) {
+        grass_sound.components.sound.stopSound()
+        path_sound.components.sound.playSound()
+        
+        }else {
+        path_sound.components.sound.stopSound()
+        grass_sound.components.sound.playSound()
+        }
+    }   
+})
+
 </script>
 
 
