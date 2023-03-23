@@ -14,6 +14,11 @@
     
 
     <a-scene fog="type: exponential; color: #AAA">
+        <!-- camera start position set here -->
+        <a-entity position="0 10 -35">
+            <a-camera></a-camera>
+          </a-entity>
+          
         <!--Assets used-->
         <a-assets>
             <!--Alley-->
@@ -106,8 +111,11 @@
 
         <!-- Sky/Background-->
        <a-sky src="#sky"></a-sky>
+
+<!-- Alley and forest area -->
+
         <!-- Ground-->
-        <a-plane color="#07440A" position="0 0 0" rotation="-90 0 0" width="300" height="300" sound="src:#herbe; refDistance:50; volume:0.2">
+        <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
             <!-- Oak trees -->
             <a-gltf-model scale="7 7 7" src="#oak_trees" position="20.29132 39.85446 0.13166" rotation="90 0 0" ></a-gltf-model>
             <a-gltf-model scale="7 7 7" src="#oak_trees" position="-20.78867 20.7357 0.01781" rotation="90 0 0" ></a-gltf-model>
@@ -166,7 +174,10 @@
             <!-- Low poly tree -->
             <a-gltf-model scale="0.005 0.005 0.005" src="#low_poly_trees" position="3.32691 7.33621 0.01779" rotation="64.68407028129428 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
 
-        </a-plane>
+        </a-circle>
+
+<!-- Swamp and house area -->
+
         <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
 
             <!--Swamp-->
