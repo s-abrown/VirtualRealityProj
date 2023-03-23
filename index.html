@@ -70,8 +70,10 @@
             <!--Logs-->
             <a-assets-item id="log" src="assets/log_photogrammetrised/scene.gltf"></a-assets-item>
 
-            <!--Donkey-->
-            <a-assets-item id="donkey" src="assets/pocket_shrek_donkey/scene.gltf"></a-assets-item>
+            <!--Donkey 1-->
+            <!-- <a-assets-item id="donkey" src="assets/pocket_shrek_donkey/scene.gltf"></a-assets-item> -->
+            <!-- Donkey 2 -->
+            <a-assets-item id="donkey2" src="assets/donkey_avatar/scene.gltf"></a-assets-item>
 
             <!--Toilet-->
             <a-assets-item id="toilet" src="assets/shreks_toilet/scene.gltf"></a-assets-item>
@@ -112,74 +114,55 @@
         <!-- Sky/Background-->
        <a-sky src="#sky"></a-sky>
 
-<!-- Alley and forest area -->
+<!-- forest and alley area -->
+       <!-- Ground-->
+       <a-circle color="#00FF00" position="0 0.5 -39.5"  rotation="-90 0 0" radius="45">
+        <!-- Maple trees (yp)-->
+        <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="8.57042 19.25422 -0.10884" rotation="-55.5516959847041 90.00021045914971 89.99963750135457" gltf-model="assets/py_trees/scene.gltf"></a-gltf-model>        
+        <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="-9.70366 -36.26725 -0.05186" rotation="22.204979350295055 -90.00021045914971 -90.00021045914971" gltf-model="assets/py_trees/scene.gltf"></a-gltf-model>
+        <!-- Birch trees -->
+        <a-gltf-model scale="3 3 3" src="#birch_tree" position="-18.62336 36.84106 0.03062" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="5 5 5" src="#birch_tree" position="-1.07753 -28.65276 0.03062" rotation="88.93794670697716 90.00765891048641 90.00765891048641" ></a-gltf-model>
+        <a-gltf-model scale="3 3 3" src="#birch_tree" position="-6.83449 3.34228 0.03062" rotation="-0.4669606030316209 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
+        <a-gltf-model scale="5 5 5" src="#birch_tree" position="30.2176 -22.16234 0.03062" rotation="-46.28410364846303 -90.00021045914971 -90.00021045914971" gltf-model="assets/birch_tree/scene.gltf"></a-gltf-model>
+        <!-- Oak trees -->
+        <a-gltf-model scale="7 7 7" src="#oak_trees" position="-20.78867 20.7357 0.01781" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="8 8 8" src="#oak_trees" position="14.52063 36.55168 0.13166" rotation="32.44946472723417 90.00021045914971 90.00021045914971" gltf-model="assets/oak_trees/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="5 5 5" src="#pine_tree2" position="17.28388 -1.15058 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="8 8 8" src="#oak_trees" position="0.18552 31.33845 0.01781" rotation="26.126302500170407 -90.00021045914971 -89.99963750135457" gltf-model="assets/oak_trees/scene.gltf"></a-gltf-model>            
+        <a-gltf-model scale="8 8 8" src="#oak_trees" position="-22.85649 -33.09144 0.01781" rotation="26.126302500170407 -90.00021045914971 -89.99963750135457" ></a-gltf-model>
+        <a-gltf-model scale="8 8 8" src="#oak_trees" position="17.19381 -20.54342 0.01781" rotation="-43.11220929461879 -90.00021045914971 -89.99963750135457" ></a-gltf-model>
+        <a-gltf-model scale="8 8 8" src="#oak_trees" position="35.49287 5.38108 0.01781" rotation="-82.28877149448398 90.00135637473998 89.99906454355946" gltf-model="assets/oak_trees/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="8 8 8" src="#oak_trees" position="-22.97799 -28.85067 0.00791" rotation="26.126302500170407 -90.00021045914971 -89.99963750135457" gltf-model="assets/oak_trees/scene.gltf"></a-gltf-model>
+       <!-- Niko maple trees -->
+        <a-gltf-model scale="0.01 0.01 0.01" src="#niko_maple" position="-11.40671 -7.73753 0.05251" rotation="14.046060347632132 90.00021045914971 90.00021045914971" ></a-gltf-model>
+        <a-gltf-model scale="0.02 0.02 0.02" src="#niko_maple" position="-31.47455 -23.23889 0.053" rotation="-56.39451690134154 90.00021045914971 89.99963750135457" gltf-model="assets/niko_maple/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="0.02 0.02 0.02" src="#niko_maple" position="-19.60905 25.14613 0.053" rotation="59.54349294338055 -90.00021045914971 -90.00021045914971" gltf-model="assets/niko_maple/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="0.02 0.02 0.02" src="#niko_maple" position="34.42101 0.32079 0.053" rotation="59.54349294338055 -90.00021045914971 -90.00021045914971" gltf-model="assets/niko_maple/scene.gltf"></a-gltf-model>
+        <!-- Pine trees -->
+        <a-gltf-model scale="6 6 6" src="#pine_tree" position="8.63556 1.74897 -0.06467" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="6 6 6" src="#pine_tree" position="-18.41547 -8.43147 -0.04177" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="6 6 6" src="#pine_tree" position="3.69494 -9.89822 -0.042" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="6 6 6" src="#pine_tree" position="28.96735 23.67044 -0.042" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="7 9.65268 7" src="#pine_tree" position="13.34553 -33.61438 -0.042" rotation="90 0 0" gltf-model="assets/pine_tree/scene.gltf"></a-gltf-model>        
+        <a-gltf-model scale="8 8 8" src="#pine_tree" position="-40.06997 4.88459 -0.042" rotation="90 0 0" gltf-model="assets/pine_tree/scene.gltf"></a-gltf-model>            
+        <a-gltf-model scale="6 6 6" src="#pine_tree" position="-0.88659 36.01451 -0.042" rotation="90 0 0" gltf-model="assets/pine_tree/scene.gltf"></a-gltf-model>
+        <!-- Pine trees 2 -->
+        <a-gltf-model scale="6 6 6" src="#pine_tree2" position="-7.24146 13.56259 0" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="6 6 6" src="#pine_tree2" position="21.42398 13.56259 0" rotation="90 0 0" ></a-gltf-model>
+        <a-gltf-model scale="5 5 5" src="#pine_tree2" position="-16.71528 -26.89861 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="5 5 5" src="#pine_tree2" position="17.28388 -1.15058 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="5 5 5" src="#pine_tree2" position="-31.49611 22.6588 0" rotation="60.99479503844692 90.00021045914971 90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>
+        <a-gltf-model scale="5 5 5" src="#pine_tree2" position="-17.23173 -39.04702 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>            
+        <!-- Wilow tree -->
+        <a-gltf-model scale="0.03 0.03 0.03" src="#willow_tree" position="-24.2941 30.13229 0" rotation="90 0 0" gltf-model="assets/willow_tree/scene.gltf"></a-gltf-model>        
+        <!-- Low poly trees -->
+        <a-gltf-model scale="0.005 0.005 0.005" src="#low_poly_trees" position="3.32691 7.33621 0.01779" rotation="64.68407028129428 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
+        <a-gltf-model scale="0.025 0.025 0.025" src="#low_poly_trees" position="-10.85146 -20.22674 0.01779" rotation="2.6298762796504787 -90.00021045914971 -90.00021045914971" gltf-model="assets/low_poly_trees/scene.gltf"></a-gltf-model>
+        <!-- Birds flying -->
+        <a-gltf-model scale="5 5 5" src="#birds_flying" position="0 20 0" rotation="0 0 0" gltf-model="assets/birds_flying/scene.gltf"></a-gltf-model>
 
-        <!-- Ground-->
-        <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
-            <!-- Oak trees -->
-            <a-gltf-model scale="7 7 7" src="#oak_trees" position="20.29132 39.85446 0.13166" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="7 7 7" src="#oak_trees" position="-20.78867 20.7357 0.01781" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="-38.24589 55.91777 0.01781" rotation="-82.28877149448397 90.00135637473998 89.99906454355946" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="37.23138 82.75163 0.01781" rotation="26.126302500170407 -90.00021045914971 -89.99963750135457" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="-22.85649 -33.09144 0.01781" rotation="26.126302500170407 -90.00021045914971 -89.99963750135457" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="17.19381 -20.54342 0.01781" rotation="-43.11220929461879 -90.00021045914971 -89.99963750135457" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="-17.26731 62.1579 0.018" rotation="19.116163876744785 90.00021045914971 90.00021045914971" ></a-gltf-model>
-            <!-- Maple trees (yp)-->
-            <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="8.57042 19.25422 0" rotation="-55.5516959847041 90.00021045914971 89.99963750135457" ></a-gltf-model>
-            <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="-19.18224 48.01134 0" rotation="-31.47429055992151 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="18.05439 45.975 0" rotation="-31.47429055992151 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <!-- Birch tree-->
-            <a-gltf-model scale="3 3 3" src="#birch_tree" position="-18.62336 36.84106 0.03062" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#birch_tree" position="35.20114 65.72101 0.03062" rotation="-46.28410364846303 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#birch_tree" position="-1.07753 -28.65276 0.03062" rotation="88.93794670697716 90.00765891048641 90.00765891048641" ></a-gltf-model>
-            <a-gltf-model scale="3 3 3" src="#birch_tree" position="-6.83449 3.34228 0.03062" rotation="-0.4669606030316209 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <!-- Oak trees -->
-            <a-gltf-model scale="7 7 7" src="#oak_trees" position="20.29132 39.85446 0.13166" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="7 7 7" src="#oak_trees" position="-20.78867 20.7357 0.01781" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#pine_tree2" position="17.28388 -1.15058 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="-38.24589 55.91777 0.01781" rotation="-82.28877149448398 90.00135637473998 89.99906454355946" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="0.18552 31.33845 0.01781" rotation="26.126302500170407 -90.00021045914971 -89.99963750135457" gltf-model="assets/oak_trees/scene.gltf"></a-gltf-model>            <a-gltf-model scale="8 8 8" src="#oak_trees" position="-22.85649 -33.09144 0.01781" rotation="26.126302500170407 -90.00021045914971 -89.99963750135457" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="17.19381 -20.54342 0.01781" rotation="-43.11220929461879 -90.00021045914971 -89.99963750135457" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="-17.26731 62.1579 0.018" rotation="19.116163876744785 90.00021045914971 90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#oak_trees" position="35.49287 5.38108 0.01781" rotation="-82.28877149448398 90.00135637473998 89.99906454355946" gltf-model="assets/oak_trees/scene.gltf"></a-gltf-model>
-            <!-- Maple trees (yp)-->
-            <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="8.57042 19.25422 0" rotation="-55.5516959847041 90.00021045914971 89.99963750135457" ></a-gltf-model>
-            <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="-19.18224 48.01134 0" rotation="-31.47429055992151 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="18.05439 45.975 0" rotation="-31.47429055992151 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="0.02 0.02 0.02" src="#niko_maple" position="34.42101 0.32079 0.053" rotation="59.54349294338055 -90.00021045914971 -90.00021045914971" gltf-model="assets/niko_maple/scene.gltf"></a-gltf-model>
-            <!-- Birch tree-->
-            <a-gltf-model scale="3 3 3" src="#birch_tree" position="-18.62336 36.84106 0.03062" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#birch_tree" position="35.20114 65.72101 0.03062" rotation="-46.28410364846303 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#birch_tree" position="-1.07753 -28.65276 0.03062" rotation="88.93794670697716 90.00765891048641 90.00765891048641" ></a-gltf-model>
-            <a-gltf-model scale="3 3 3" src="#birch_tree" position="-6.83449 3.34228 0.03062" rotation="-0.4669606030316209 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#birch_tree" position="30.2176 -22.16234 0.03062" rotation="-46.28410364846303 -90.00021045914971 -90.00021045914971" gltf-model="assets/birch_tree/scene.gltf"></a-gltf-model>
-            <!-- Niko maple tree -->
-            <a-gltf-model scale="0.01 0.01 0.01" src="#niko_maple" position="-11.40671 -7.73753 0.05251" rotation="14.046060347632132 90.00021045914971 90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="0.02 0.02 0.02" src="#niko_maple" position="-33.66462 31.43191 0.053" rotation="59.54349294338055 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="0.02 0.02 0.02" src="#niko_maple" position="28.08901 61.99828 0.053" rotation="59.54349294338055 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="0.02 0.02 0.02" src="#niko_maple" position="-31.47455 -23.23889 0.053" rotation="-56.39451690134154 90.00021045914971 89.99963750135457" gltf-model="assets/niko_maple/scene.gltf"></a-gltf-model>
-            <!-- Pine Tree -->
-            <a-gltf-model scale="6 6 6" src="#pine_tree" position="8.63556 1.74897 -0.06467" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="6 6 6" src="#pine_tree" position="-18.41547 -8.43147 -0.04177" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="6 6 6" src="#pine_tree" position="3.69494 -9.89822 -0.042" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="6 6 6" src="#pine_tree" position="28.96735 23.67044 -0.042" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="6 6 6" src="#pine_tree" position="-9.40365 69.8193 -0.042" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="7 7 7" src="#pine_tree" position="-50.47845 45.29639 -0.042" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="7 7 7" src="#pine_tree" position="13.34553 -33.61438 -0.042" rotation="90 0 0" gltf-model="assets/pine_tree/scene.gltf"></a-gltf-model>
-            <a-gltf-model scale="8 8 8" src="#pine_tree" position="-40.06997 4.88459 -0.042" rotation="90 0 0" gltf-model="assets/pine_tree/scene.gltf"></a-gltf-model>            <a-gltf-model scale="6 6 6" src="#pine_tree" position="-0.88659 36.01451 -0.042" rotation="90 0 0" gltf-model="assets/pine_tree/scene.gltf"></a-gltf-model>
-            <!-- Pine Tree 2 -->
-            <a-gltf-model scale="6 6 6" src="#pine_tree2" position="-7.24146 13.56259 0" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="6 6 6" src="#pine_tree2" position="21.42398 13.56259 0" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="6 6 6" src="#pine_tree2" position="47.7324 58.00196 0" rotation="90 0 0" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#pine_tree2" position="-16.71528 -26.89861 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#pine_tree2" position="17.28388 -1.15058 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>
-            <a-gltf-model scale="6 6 6" src="#pine_tree2" position="6.39238 75.79476 0" rotation="29.29533206503899 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-            <a-gltf-model scale="5 5 5" src="#pine_tree2" position="-31.49611 22.6588 0" rotation="60.99479503844692 90.00021045914971 90.00021045914971" gltf-model="assets/pine_tree2/scene.gltf"></a-gltf-model>            <!-- Wilow tree -->
-            <a-gltf-model scale="0.03 0.03 0.03" src="#willow_tree" position="-10.0515 26.14272 0" rotation="90 0 0" ></a-gltf-model>
-            <!-- Low poly tree -->
-            <a-gltf-model scale="0.005 0.005 0.005" src="#low_poly_trees" position="3.32691 7.33621 0.01779" rotation="64.68407028129428 -90.00021045914971 -90.00021045914971" ></a-gltf-model>
-
-        </a-circle>
+    </a-circle>
 
 <!-- Swamp and house area -->
 
@@ -241,9 +224,9 @@
             <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-1.29272 -9.07344 0.28161" rotation="69.08896981026005 87.74046491515375 87.88313140614132" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
             <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-0.2021 10.42377 0.26949" rotation="69.08896981026005 87.74046491515375 87.88313140614132" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
             <!--Donkey-->
-            <a-gltf-model scale="0.09 0.09 0.09" src="#donkey" position="6.38798 -3.083 0.24272" rotation="85.79183545391382 -71.61571368678699 -66.34622084496881"></a-gltf-model>
+            <a-gltf-model scale="0.09 0.09 0.09" src="#donkey2" position="6.38798 -3.083 0.24272" rotation="85.79183545391382 -71.61571368678699 -66.34622084496881"></a-gltf-model>
             <!--Toilet-->
-            <a-gltf-model src="#toilet" position="0 10.03651 1.0517" rotation="-72.18351486176164 90.00078341694484 89.99963750135457" scale="1.2 1.2 1.2" sound="src: #toilette; on :click; volume: 1; refDistance :1"></a-gltf-model>
+            <a-gltf-model src="#toilet" position="0 10.03651 1.0517" rotation="-72.18351486176164 90.00078341694484 89.99963750135457" scale="1.2 1.2 1.2" sound="src: #toilette; on :click; volume: 1; refDistance :1" animation-mixer ></a-gltf-model>
             <!--Animated duck-->
             <a-gltf-model src="#animated_duck" position="-4.52489 -11.15263 0.03253" scale="0.3 0.3 0.3" rotation="-72.663 -90.00021045914971 -90" animation-mixer sound="src: #canard; on :click; volume: 1; refDistance :1"></a-gltf-model>
         </a-circle>
