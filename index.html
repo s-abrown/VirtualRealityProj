@@ -14,14 +14,14 @@
     
 
     <a-scene fog="type: exponential; color: #AAA">
-        <!-- camera start position set here -->
+        <!-- camera start position set here for convenience: -->
         <a-entity position="0 10 -35">
             <a-camera></a-camera>
           </a-entity>
 
         <!--Assets used-->
         <a-assets>
-            <!--Alley-->
+            <!--Alley assets -->
             <img id='sol' src="assets/sol.jpg">
             <img id="sky" src="assets/sky.jpeg" alt="monFond">
             <a-assets-item id="plantes" src="assets/scene.gltf"></a-assets-item>
@@ -31,6 +31,7 @@
             <a-assets-item id="fleurs" src="assets/fleur.gltf"></a-assets-item>
             <a-assets-item id="trefles" src="assets/trefles.gltf"></a-assets-item>
 
+            <!-- Sound assets -->
             <audio id="etang" src="assets/Sounds/eau.mp3" preload="auto"></audio>
             <audio id="foret" src="assets/Sounds/forêt.mp3" preload="auto"></audio>
             <audio id="chien" src="assets/Sounds/chien.mp3" preload="auto"></audio>
@@ -40,50 +41,39 @@
             <audio id="gravier" src="assets/Sounds/Pas sur gravier.mp3" preload="auto"></audio>
             <audio id="herbe" src="assets/Sounds/pas dans l'herbe.mp3" preload="auto"></audio>
 
+            <!-- House and swamp area -->
             <!--Doghouse-->
             <a-assets-item id="doghouse" src="assets/doghouse0908.gltf"></a-assets-item>
-
             <!--Dog-->
             <a-assets-item id="dog" src="assets/dog/scene.gltf"></a-assets-item>
-
             <!--boat-->
             <a-assets-item id="boat" src="assets/boat/scene.gltf"></a-assets-item>
-
             <!--Crate-->
             <a-assets-item id="crate" src="assets/crate/wooden crate.glb"></a-assets-item>
-
             <!--House-->
             <a-assets-item id="house" src="assets/medieval_house/scene.gltf"></a-assets-item>
-
             <!--Grass0-->
             <a-assets-item id="grass0" src="assets/grass_free/scene.gltf"></a-assets-item>
-
             <!--Grass2 (and stones)-->
             <a-assets-item id="grass2" src="assets/stones_and_grass/scene.gltf"></a-assets-item>
-
             <!--Frog-->
             <a-assets-item id="frog" src="assets/frog/scene.gltf"></a-assets-item>
-            
             <!--Dragonfly-->
             <a-assets-item id="dragonfly" src="assets/dragonfly/scene.gltf"></a-assets-item>
-            
             <!--Logs-->
             <a-assets-item id="log" src="assets/log_photogrammetrised/scene.gltf"></a-assets-item>
-
             <!--Donkey 1-->
             <!-- <a-assets-item id="donkey" src="assets/pocket_shrek_donkey/scene.gltf"></a-assets-item> -->
             <!-- Donkey 2 -->
             <a-assets-item id="donkey2" src="assets/donkey_avatar/scene.gltf"></a-assets-item>
-
             <!--Toilet-->
             <a-assets-item id="toilet" src="assets/shreks_toilet/scene.gltf"></a-assets-item>
-
             <!--Mud material-->
             <a-assets-item id="mud" src="assets/mud_material/scene.gltf"></a-assets-item>
-
             <!--Animated duck-->
             <a-assets-item id="animated_duck" src="assets/duck_animation/scene.gltf"></a-assets-item>
 
+            <!-- forest -->
             <!-- Oak trees-->
             <a-assets-item id="oak_trees" src="assets/oak_trees/scene.gltf"></a-assets-item>
             <!-- Maple Trees-->
@@ -102,7 +92,7 @@
             <a-assets-item id="low_poly_trees" src="assets/low_poly_trees/scene.gltf"></a-assets-item>
         </a-assets>
 
-        <!--A camera -->
+        <!-- A camera (is this for interactions?) -->
         <a-camera id="camera" postion-player >
             <a-cursor></a-cursor>
         </a-camera>
@@ -112,11 +102,11 @@
         <a-light type="point" intensity="2" position="2 4 4"></a-light>
 
         <!-- Sky/Background-->
-       <a-sky src="#sky"></a-sky>
+        <a-sky src="#sky"></a-sky>
 
-<!-- forest and alley area -->
-       <!-- Ground-->
-       <a-circle color="#00FF00" position="0 0.5 -39.5"  rotation="-90 0 0" radius="45">
+        <!-- forest and alley area -->
+        <!-- Ground-->
+        <a-circle color="#00FF00" position="0 0.5 -39.5"  rotation="-90 0 0" radius="45">
         <!-- Maple trees (yp)-->
         <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="8.57042 19.25422 -0.10884" rotation="-55.5516959847041 90.00021045914971 89.99963750135457" gltf-model="assets/py_trees/scene.gltf"></a-gltf-model>        
         <a-gltf-model scale="0.01 0.01 0.01" src="#py_trees" position="-9.70366 -36.26725 -0.05186" rotation="22.204979350295055 -90.00021045914971 -90.00021045914971" gltf-model="assets/py_trees/scene.gltf"></a-gltf-model>
@@ -164,8 +154,8 @@
 
     </a-circle>
 
-<!-- Swamp and house area -->
-
+        <!-- Swamp and house area -->
+        
         <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
 
             <!--Swamp-->
