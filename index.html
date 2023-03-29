@@ -7,7 +7,7 @@
     <title>This is a swamp</title>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
-     <!-- A-frame extras (for animation possibly)-->
+     <!-- A-frame extras (for animating gltf files )-->
      <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 </head>
 <body>
@@ -19,7 +19,7 @@
             <a-camera></a-camera>
           </a-entity>
 
-        <!--Assets used-->
+        <!-- ////////////////////////////////////////////////// Assets used //////////////////////////////////////////////////  -->
         <a-assets>
             <!--Alley assets -->
             <img id='sol' src="assets/sol.jpg">
@@ -92,6 +92,8 @@
             <a-assets-item id="low_poly_trees" src="assets/low_poly_trees/scene.gltf"></a-assets-item>
         </a-assets>
 
+        <!-- ////////////////////////////////////////////////// Camera, lighting, sky //////////////////////////////////////////////////  -->
+
         <!-- A camera (is this for interactions?) -->
         <a-camera id="camera" postion-player >
             <a-cursor></a-cursor>
@@ -104,7 +106,7 @@
         <!-- Sky/Background-->
         <a-sky src="#sky"></a-sky>
 
-        <!-- forest and alley area -->
+        <!-- ////////////////////////////////////////////////// Forest area //////////////////////////////////////////////////  -->
         <!-- Ground-->
         <a-circle color="#00FF00" position="0 0.5 -39.5"  rotation="-90 0 0" radius="45">
         <!-- Maple trees (yp)-->
@@ -154,16 +156,14 @@
 
     </a-circle>
 
-        <!-- Swamp and house area -->
+        <!-- ////////////////////////////////////////////////// Swamp and house area //////////////////////////////////////////////////  -->
         
         <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
-
             <!--Swamp-->
             <a-circle color="#445451" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
             <a-circle color="#445451" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
             <a-circle color="#445451" position="0.7514 0.72618 0.009" radius="7" material="" geometry=""></a-circle>
             <a-circle color="#445451" position="-6.5974 4.29488 0.009" radius="7" material="" geometry=""></a-circle>
-        
             <!--Doghouse-->
             <a-gltf-model scale="1.2 1.2 1.2" src="#doghouse" position="12.12163 -3.53097 -0.00286" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971"></a-gltf-model>
             <!--Dog-->
@@ -221,7 +221,7 @@
             <a-gltf-model src="#animated_duck" position="-4.52489 -11.15263 0.03253" scale="0.3 0.3 0.3" rotation="-72.663 -90.00021045914971 -90" animation-mixer sound="src: #canard; on :click; volume: 1; refDistance :1"></a-gltf-model>
         </a-circle>
 
-        <!-- Alley-->
+        <!-- ////////////////////////////////////////////////// Alley //////////////////////////////////////////////////  -->
         <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/grass.gltf"  position="-1 0.5 4"    rotation="0 -90 0"></a-entity>
         <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/scene.gltf"  position="-1 0.5 1"    rotation="0 90 0"></a-entity>
         <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 0"    rotation="0 -90 0"></a-entity>
