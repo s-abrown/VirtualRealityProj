@@ -1,0 +1,11 @@
+Model Information:
+* title:	Fox
+* source:	https://sketchfab.com/3d-models/fox-4e37c303f8a241aaa2511bd9f3019273
+* author:	Alexei Ostapenko (https://sketchfab.com/alexanders823)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Fox" (https://sketchfab.com/3d-models/fox-4e37c303f8a241aaa2511bd9f3019273) by Alexei Ostapenko (https://sketchfab.com/alexanders823) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

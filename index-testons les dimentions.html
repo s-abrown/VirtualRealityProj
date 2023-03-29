@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>This is a swamp</title>
         <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <!-- gltf animation pack -->
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>    
+
     </head>
     <body>
         <a-scene>
@@ -35,6 +38,13 @@
                 <a-assets-item id="niko_maple" src="assets/niko_maple/scene.gltf"></a-assets-item>
                 <a-assets-item id="pine_tree" src="assets/pine_tree/scene.gltf"></a-assets-item>
                 <a-assets-item id="pine_tree2" src="assets/pine_tree2/scene.gltf"></a-assets-item>
+                <a-assets-item id="frog_and_lilies" src="assets/frog_and_lilies/scene.gltf"></a-assets-item>
+                <a-assets-item id="fox" src="assets/fox/scene.gltf"></a-assets-item>
+                <a-assets-item id="mushrooms" src="assets/neon_mushrooms/scene.gltf"></a-assets-item>
+                <a-assets-item id="water" src="assets/water_anim/scene.gltf"></a-assets-item>
+
+
+
 
                 <!--audio-->
                 <audio id="gravier" src="assets/Sounds/Pas sur gravier.mp3" preload="auto"></audio>
@@ -134,12 +144,12 @@
                 <!--Swamp-->
                 <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
                     <!--Swamp-->
-                    <a-circle color="#445451" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
+                    <a-circle color="blue" position="0.7514 -3.9257 0.009" radius="7" material="metalness: 1;roughness: 0.5" geometry=""></a-circle>
                     <a-circle color="#445451" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
                     <a-circle color="#445451" position="0.7514 0.72618 0.009" radius="7" material="" geometry=""></a-circle>
                     <a-circle color="#445451" position="-6.5974 4.29488 0.009" radius="7" material="" geometry=""></a-circle>
                     <!--Doghouse-->
-                    <a-gltf-model scale="1.2 1.2 1.2" src="#doghouse" position="12.12163 -3.53097 -0.00286" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971"></a-gltf-model>
+                    <a-gltf-model scale="1.2 1.2 1.2" src="#doghouse" position="12.12163 -3.53097 -0.00286" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971" animation-mixer=""></a-gltf-model>
                     <!--Dog-->
                     <a-gltf-model scale="" src="#dog" position="8.55465 -5.00668 1.99409" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971" sound="src: #chien; on :click; volume: 1; refDistance :1"></a-gltf-model>
                     <!--Crate-->
@@ -163,11 +173,15 @@
                     <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-1.29272 -9.07344 0.28161" rotation="69.08896981026005 87.74046491515375 87.88313140614132" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model>
                     <a-gltf-model scale="0.03 0.03 0.03" src="#frog" position="-0.2021 10.42377 0.26949" rotation="69.08896981026005 87.74046491515375 87.88313140614132" sound="src: #grenouilles; on :click; volume: 1; refDistance :1"></a-gltf-model> -->
                     <!--Donkey-->
-                    <a-gltf-model scale="0.09 0.09 0.09" src="#donkey" position="6.38798 -3.083 0.24272" rotation="85.79183545391382 -71.61571368678699 -66.34622084496881"></a-gltf-model>
+                    <a-gltf-model scale="0.09 0.09 0.09" src="#donkey" position="6.38798 -3.083 0.24272" rotation="85.79183545391382 -71.61571368678699 -66.34622084496881" animation-mixer=""></a-gltf-model>
                     <!--Toilet-->
                     <a-gltf-model src="#toilet" position="0 10.03651 1.0517" rotation="-72.18351486176164 90.00078341694484 89.99963750135457" scale="1.2 1.2 1.2" sound="src: #toilette; on :click; volume: 1; refDistance :1"></a-gltf-model>
                     <!--Animated duck fais des problèmes dans la console mais pas sûre que ce soit un problème-->
                     <a-gltf-model src="#animated_duck" position="-4.52489 -11.15263 0.03253" scale="0.3 0.3 0.3" rotation="-72.663 -90.00021045914971 -90" animation-mixer sound="src: #canard; on :click; volume: 1; refDistance :1"></a-gltf-model>
+                    <!-- Frog and lilies -->
+                    <a-gltf-model scale="0.0015 0.0015 0.0015" src="#frog_and_lilies" position="-3.93223 -2.624 0.12034" rotation="38.773 -91.138 -90.713" animation-mixer="" gltf-model="assets/frog_and_lilies/scene.gltf"></a-gltf-model>
+                    <!-- Fox -->
+                    <a-gltf-model scale="0.008 0.008 0.008" src="#fox" position="8.78328 12.83883 0.05748" rotation="26.59440901879229 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/fox/scene.gltf"></a-gltf-model>
                     <!--Grass0-->
                     <!-- <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-1.2706 -11.08365 -0.05751" rotation="0 90 90"></a-gltf-model>
                     <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-1.48188 -10.90038 0" rotation="0 90 90"></a-gltf-model>
@@ -193,9 +207,13 @@
                     <a-plane src="#sol" repeat="1 5" position="8.30187 -9.05319 0.009" rotation="0 0 -37.737" material="" geometry="width: 1.5; height: 3" width="2" height="4"></a-plane>
                     <a-plane src="#sol" repeat="1 5" position="9.02425 -6.88222 0.009" material="" geometry="width: 1.5; height: 3" width="2" height="4"></a-plane>
                     <a-plane src="#sol" repeat="1 5" position="9.09227 -5.57391 0.009" material="" geometry="width: 1.5; height: 3" width="2" height="4"></a-plane> -->
-                </a-circle> 
-
-                <!--Alley-->
+                    <!-- Neon mushrooms -->
+                    <a-gltf-model scale="2.5 2.5 2.5" src="#mushrooms" position="0.44911 11.48439 0.05869" rotation="90 0 0" animation-mixer="" gltf-model="assets/neon_mushrooms/scene.gltf"></a-gltf-model>
+                    <a-gltf-model scale="2.5 2.5 2.5" src="#mushrooms" position="-15.75224 -0.51361 0.05869" rotation="90 0 0" animation-mixer="" gltf-model="assets/neon_mushrooms/scene.gltf"></a-gltf-model>
+                    <a-gltf-model scale="2.5 2.5 2.5" src="#mushrooms" position="-8.00597 -13.11178 0.05869" rotation="8.65796524222187 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/neon_mushrooms/scene.gltf"></a-gltf-model>
+                    <!-- water (is animated but I can't figure out how to make colours work for it) -->
+                    <!-- <a-gltf-model scale="0.10003 0.01 0.18095" src="#water" position="-2.53566 -1.96164 0.07753" rotation="90 0 0" animation-mixer="timeScale: 0.08" material="color: #00FFFF" gltf-model="assets/water_anim/scene.gltf"></a-gltf-model>                 -->
+                    <!--Alley-->
                 <a-plane id="path" src="#sol" repeat="1 10" position="0 0.5 -21.1" rotation="-90 0 0" width="2" height="7" sound="src:#gravier; refDistance:10; volume:0.2">
                 <!--Rocks-->
                 <!-- <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="1 0 0" rotation="0 90 90" ></a-gltf-model>

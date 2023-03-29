@@ -19,7 +19,7 @@
             <a-camera></a-camera>
           </a-entity>
 
-        <!-- ////////////////////////////////////////////////// Assets used //////////////////////////////////////////////////  -->
+        <!-- ////////////////////////////////////////////////// ASSETS USED //////////////////////////////////////////////////  -->
         <a-assets>
             <!--Alley assets -->
             <img id='sol' src="assets/sol.jpg">
@@ -72,6 +72,17 @@
             <a-assets-item id="mud" src="assets/mud_material/scene.gltf"></a-assets-item>
             <!--Animated duck-->
             <a-assets-item id="animated_duck" src="assets/duck_animation/scene.gltf"></a-assets-item>
+            <!-- Frog and lilies -->
+            <a-assets-item id="frog_and_lilies" src="assets/frog_and_lilies/scene.gltf"></a-assets-item>
+            <!-- Fox -->
+            <a-assets-item id="fox" src="assets/fox/scene.gltf"></a-assets-item>
+            <!-- Neon mushrooms -->
+            <a-assets-item id="mushrooms" src="assets/neon_mushrooms/scene.gltf"></a-assets-item>
+            <!-- Water -->
+            <a-assets-item id="water" src="assets/water_anim/scene.gltf"></a-assets-item>
+
+
+
 
             <!-- forest -->
             <!-- Oak trees-->
@@ -106,7 +117,7 @@
         <!-- Sky/Background-->
         <a-sky src="#sky"></a-sky>
 
-        <!-- ////////////////////////////////////////////////// Forest area //////////////////////////////////////////////////  -->
+        <!-- ////////////////////////////////////////////////// FOREST AREA //////////////////////////////////////////////////  -->
         <!-- Ground-->
         <a-circle color="#00FF00" position="0 0.5 -39.5"  rotation="-90 0 0" radius="45">
         <!-- Maple trees (yp)-->
@@ -156,7 +167,7 @@
 
     </a-circle>
 
-        <!-- ////////////////////////////////////////////////// Swamp and house area //////////////////////////////////////////////////  -->
+        <!-- ////////////////////////////////////////////////// SWAMP AND HOUSE AREA //////////////////////////////////////////////////  -->
         
         <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
             <!--Swamp-->
@@ -219,9 +230,19 @@
             <a-gltf-model src="#toilet" position="0 10.03651 1.0517" rotation="-72.18351486176164 90.00078341694484 89.99963750135457" scale="1.2 1.2 1.2" sound="src: #toilette; on :click; volume: 1; refDistance :1" animation-mixer ></a-gltf-model>
             <!--Animated duck-->
             <a-gltf-model src="#animated_duck" position="-4.52489 -11.15263 0.03253" scale="0.3 0.3 0.3" rotation="-72.663 -90.00021045914971 -90" animation-mixer sound="src: #canard; on :click; volume: 1; refDistance :1"></a-gltf-model>
+            <!-- Frog and lilies -->
+            <a-gltf-model scale="0.002 0.002 0.002" src="#frog_and_lilies" position="-3.93223 -2.624 0.12034" rotation="38.773 -91.138 -90.713" animation-mixer="" gltf-model="assets/frog_and_lilies/scene.gltf"></a-gltf-model>
+            <!-- Fox -->
+            <a-gltf-model scale="0.008 0.008 0.008" src="#fox" position="8.78328 12.83883 0.05748" rotation="26.59440901879229 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/fox/scene.gltf"></a-gltf-model>
+            <!-- Neon mushrooms -->
+            <a-gltf-model scale="2.5 2.5 2.5" src="#mushrooms" position="0.44911 11.48439 0.05869" rotation="90 0 0" animation-mixer="" gltf-model="assets/neon_mushrooms/scene.gltf"></a-gltf-model>
+            <a-gltf-model scale="2.5 2.5 2.5" src="#mushrooms" position="-15.75224 -0.51361 0.05869" rotation="90 0 0" animation-mixer="" gltf-model="assets/neon_mushrooms/scene.gltf"></a-gltf-model>
+            <a-gltf-model scale="2.5 2.5 2.5" src="#mushrooms" position="-8.00597 -13.11178 0.05869" rotation="8.65796524222187 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/neon_mushrooms/scene.gltf"></a-gltf-model>
+            <!-- water (is animated but I can't figure out how to make colours work for it) -->
+            <!-- <a-gltf-model scale="0.10003 0.01 0.18095" src="#water" position="-2.53566 -1.96164 0.07753" rotation="90 0 0" animation-mixer="timeScale: 0.08" material="color: #00FFFF" gltf-model="assets/water_anim/scene.gltf"></a-gltf-model>                 -->
         </a-circle>
 
-        <!-- ////////////////////////////////////////////////// Alley //////////////////////////////////////////////////  -->
+        <!-- ////////////////////////////////////////////////// ALLEY //////////////////////////////////////////////////  -->
         <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/grass.gltf"  position="-1 0.5 4"    rotation="0 -90 0"></a-entity>
         <a-entity scale="0.1 0.1 0.1"        gltf-model="assets/scene.gltf"  position="-1 0.5 1"    rotation="0 90 0"></a-entity>
         <a-entity scale="0.01 0.01 0.01"     gltf-model="assets/fleur.gltf"   position="-0.7 0.7 0"    rotation="0 -90 0"></a-entity>
