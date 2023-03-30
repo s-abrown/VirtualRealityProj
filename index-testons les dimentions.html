@@ -13,7 +13,7 @@
     <body>
         <a-scene>
             <a-assets>
-                <!--img-->
+                <!--IMG -->
                 <img id='sol' src="assets/sol.jpg">
                 <img id="sky" src="assets/sky.jpeg" alt="monFond">
 
@@ -46,12 +46,9 @@
                 <a-assets-item id="pond" src="assets/pond_test/scene.gltf"></a-assets-item>
                 <a-assets-item id="grass_more" src="assets/grass_more/scene.gltf"></a-assets-item>
                 <a-assets-item id="red_baron" src="assets/reed_baron/scene.gltf"></a-assets-item>
-
-
-
-
-
-
+                <a-assets-item id="cages" src="assets/cages/scene.gltf"></a-assets-item>
+                <a-assets-item id="ginger_bread_man" src="assets/ginger_bread_man/scene.gltf"></a-assets-item>
+                <a-assets-item id="lantern" src="assets/lantern/scene.gltf"></a-assets-item>
 
                 <!--audio-->
                 <audio id="gravier" src="assets/Sounds/Pas sur gravier.mp3" preload="auto"></audio>
@@ -233,9 +230,15 @@
                     <a-gltf-model scale="3 3 3" src="#red_baron" position="5.74444 6.88514 -0.599" rotation="35.576668373058205 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/red_baron/scene.gltf"></a-gltf-model>
                     <a-gltf-model scale="3 3 3" src="#red_baron" position="3.33508 8.39072 -0.599" rotation="-41.94509426593731 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/red_baron/scene.gltf"></a-gltf-model>
                     <a-gltf-model scale="3 3 3" src="#red_baron" position="-1.5354 10.99798 -0.599" rotation="-41.94509426593731 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/red_baron/scene.gltf"></a-gltf-model>
+                    <!-- Cages -->
+                    <a-gltf-model scale="0.5 0.5 0.5" src="#cages" position="12.40776 3.39562 0" rotation="90 0 0" animation-mixer="" gltf-model="assets/cages/scene.gltf"></a-gltf-model>
+                    <!-- Ginger bread man -->
+                    <a-gltf-model scale="0.005 0.005 0.005" src="#ginger_bread_man" position="12.7525 1.50491 0" rotation="-20.486105964902585 90.00021045914971 90.00021045914971" animation-mixer="" gltf-model="assets/ginger_bread_man/scene.gltf"></a-gltf-model>
+                    <!-- Lantern -->
+                    <a-gltf-model scale="0.005 0.005 0.005" src="#lantern" position="14.95245 1.85873 0" rotation="90 0 0" animation-mixer="" gltf-model="assets/lantern/scene.gltf" light="type: point; color: #ffd480; intensity: 2"></a-gltf-model>
 
                     <!--Alley-->
-                <a-plane id="path" src="#sol" repeat="1 10" position="0 0.5 -21.1" rotation="-90 0 0" width="2" height="7" sound="src:#gravier; refDistance:10; volume:0.2">
+                    <a-plane id="path" src="#sol" repeat="1 10" position="0 0.5 -21.1" rotation="-90 0 0" width="2" height="7" sound="src:#gravier; refDistance:10; volume:0.2">
                 <!--Rocks-->
                 <!-- <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="1 0 0" rotation="0 90 90" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="-1 1 0" rotation="49.90691578707523 98.04453790278647 90.00021045914971" ></a-gltf-model>

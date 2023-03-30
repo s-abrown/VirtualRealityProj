@@ -1,0 +1,11 @@
+Model Information:
+* title:	Gingerbread Man (from Shrek)
+* source:	https://sketchfab.com/3d-models/gingerbread-man-from-shrek-9e9385d8707f414a83a268a9d11e3b79
+* author:	Valentine Buketov (https://sketchfab.com/ValentineBuketov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Gingerbread Man (from Shrek)" (https://sketchfab.com/3d-models/gingerbread-man-from-shrek-9e9385d8707f414a83a268a9d11e3b79) by Valentine Buketov (https://sketchfab.com/ValentineBuketov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
