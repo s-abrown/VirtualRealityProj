@@ -16,6 +16,7 @@
                 <!--IMG -->
                 <img id='sol' src="assets/sol.jpg">
                 <img id="sky" src="assets/sky.jpeg" alt="monFond">
+                <img id="water" src="assets/water.gif">
 
                 <!--GLTF-->
                 <a-assets-item id="pierres" src="assets/rock/scene.gltf"></a-assets-item>
@@ -147,11 +148,11 @@
 
                 <!--Swamp-->
                 <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
-                    <!--Swamp-->
-                    <a-circle color="#429abd" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
-                    <a-circle color="#429abd" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
-                    <a-circle color="#429abd" position="0.7514 0.72618 0.009" radius="7" material="" geometry=""></a-circle>
-                    <a-circle color="#429abd" position="-6.5974 4.29488 0.009" radius="7" material="" geometry=""></a-circle>
+                    <!--Swamp color="#429abd" -->
+                    <a-circle src="#water" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
+                    <a-circle src="#water" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
+                    <a-circle src="#water" position="0.7514 0.72618 0.009" radius="7" material="" geometry=""></a-circle>
+                    <a-circle src="#water" position="-6.5974 4.29488 0.009" radius="7" material="" geometry=""></a-circle>
                     <!--Doghouse-->
                     <a-gltf-model scale="1.2 1.2 1.2" src="#doghouse" position="12.12163 -3.53097 -0.00286" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971" animation-mixer=""></a-gltf-model>
                     <!--Dog-->
