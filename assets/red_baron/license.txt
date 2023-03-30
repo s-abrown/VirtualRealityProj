@@ -1,0 +1,11 @@
+Model Information:
+* title:	Red Baron
+* source:	https://sketchfab.com/3d-models/red-baron-4f6fdcedd61d4783a5862f92282e72a8
+* author:	Somersby (https://sketchfab.com/Somersby)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Red Baron" (https://sketchfab.com/3d-models/red-baron-4f6fdcedd61d4783a5862f92282e72a8) by Somersby (https://sketchfab.com/Somersby) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

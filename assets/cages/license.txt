@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cage for many things
+* source:	https://sketchfab.com/3d-models/cage-for-many-things-4460c58b184244d8906ae6b822ff1ccd
+* author:	LadyIReyna (https://sketchfab.com/LadyIReyna)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cage for many things" (https://sketchfab.com/3d-models/cage-for-many-things-4460c58b184244d8906ae6b822ff1ccd) by LadyIReyna (https://sketchfab.com/LadyIReyna) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
