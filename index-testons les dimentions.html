@@ -42,7 +42,7 @@
                 <a-assets-item id="frog_and_lilies" src="assets/frog_and_lilies/scene.gltf"></a-assets-item>
                 <a-assets-item id="fox" src="assets/fox/scene.gltf"></a-assets-item>
                 <a-assets-item id="mushrooms" src="assets/neon_mushrooms/scene.gltf"></a-assets-item>
-                <a-assets-item id="lanterns" src="assets/lanterne/scene.gltf"></a-assets-item>  
+                <a-assets-item id="tron" src="assets/tron/scene.gltf"></a-assets-item>  
 
                 <!-- WATER GLTF (issue)-->
                 <a-assets-item id="water" src="assets/water_anim/scene.gltf"></a-assets-item>
@@ -173,10 +173,10 @@
                 <!--Swamp-->
                 <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
                     <!--Swamp color="#429abd" -->
-                    <a-circle src="#water" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
-                    <a-circle src="#water" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
-                    <a-circle src="#water" position="0.7514 0.72618 0.009" radius="7" material="" geometry=""></a-circle>
-                    <a-circle src="#water" position="-6.5974 4.29488 0.009" radius="7" material="" geometry=""></a-circle>
+                    <a-circle src="#water" color="#748500" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
+                    <a-circle src="#water" color="#748500" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
+                    <a-circle src="#water" color="#748500" position="0.7514 0.72618 0.009" radius="7" material="" geometry=""></a-circle>
+                    <a-circle src="#water" color="#748500" position="-6.5974 4.29488 0.009" radius="7" material="" geometry=""></a-circle>
                     <!--Doghouse-->
                     <a-gltf-model scale="1.2 1.2 1.2" src="#doghouse" position="12.12163 -3.53097 -0.00286" rotation="34.09098881028398 -90.00021045914971 -90.00021045914971" animation-mixer=""></a-gltf-model>
                     <!--Dog-->
@@ -284,8 +284,23 @@
                     <!-- Ginger bread man -->
                     <a-gltf-model scale="0.005 0.005 0.005" src="#ginger_bread_man" position="12.7525 1.50491 0" rotation="-20.486105964902585 90.00021045914971 90.00021045914971" animation-mixer="" gltf-model="assets/ginger_bread_man/scene.gltf"></a-gltf-model>
                     <!-- Lantern -->
-                    <a-gltf-model scale="0.005 0.005 0.005" src="#lantern" position="13.327 1.711 0.987" rotation="90 0 0" animation-mixer="" gltf-model="assets/lantern/scene.gltf" light="type:spot; angle:180; distance:1.2; decay:0.8; intensity:10; color: #e25822"
+                    <a-gltf-model scale="0.005 0.005 0.005" src="#lantern" position="13.327 1.711 0.987" rotation="90 0 0" animation-mixer="" gltf-model="assets/lantern/scene.gltf" light="type:spot; angle:180; distance:1.410; decay:1.020; intensity:8; color: #e25822"
                     animation="property: light.intensity; to: 5 ; dir: alternate; loop: true; dur: 1000"></a-gltf-model>
+
+                    <a-gltf-model scale="0.008 0.008 0.008" src="#lantern" position="-13.087 -1.581 0.709" rotation="90 0 0"></a-gltf-model>
+                    <a-light type="spot" angle="180" distance="3" decay="2.5" intensity="10" color=" #e25822" position="-13.087 -1.581 1.282"
+                    animation="property: light.intensity; to: 8 ; dir: alternate; loop: true; dur: 800"></a-light>  
+
+                    <a-gltf-model scale="0.008 0.008 0.008" src="#lantern" position="0.212 9.424 2.236" rotation="86.04 0 0" light="type:spot; angle:180; distance:2.5; decay:0.8; intensity:10; color: #e25822"
+                    animation="property: light.intensity; to: 8 ; dir: alternate; loop: true; dur: 800"></a-gltf-model>
+
+                    <a-gltf-model scale="0.008 0.008 0.008" src="#lantern" position="-1.774 -12.793 -0.006" rotation="90 0 0"></a-gltf-model> 
+                    <a-light type="spot" angle="180" distance="1.5" decay="1.5" intensity="10" color=" #e25822" position="-1.774 -12.793 1"
+                    animation="property: light.intensity; to: 8 ; dir: alternate; loop: true; dur: 800"></a-light>  
+                    
+                    <!-- Trunk -->
+                    <a-gltf-model scale="1 1 1" src="#tron" position="-12.539 -1.581 0.287" rotation="90 0 0" ></a-gltf-model>
+                    
                     <!-- Campfire -->
                     <!-- <a-gltf-model scale="1 1 1" src="#campfire" position="" rotation="90 0 0" animation-mixer="" gltf-model="assets/campfire/scene.gltf" "></a-gltf-model> -->
 
