@@ -70,17 +70,27 @@
                 <a-camera id="camera" postion-player position="0 1.6 -20" >
                     <a-cursor></a-cursor>
                 </a-camera>
-
-                <a-sphere r="1000" src="#moon" scale="10 10 10" opacity="1" position="200 200 200" color="white" light="type:ambient; intensity:0.5; color: white" 
+                <a-entity geometry="primitive: sphere" 
+                r="1000" 
+                scale="10 10 10" 
+                opacity="1" 
+                position="200 200 200" 
+                material="color: white; src:#moon" 
+                light="type:ambient; intensity:0.5; color: white" 
                 animation__mouseenter_1="property: rotation; to: 0 180 0; startEvents: mouseenter ;  dur: 3000;"
-                animation__mouseenter_2="property: light.color; to : red; startEvents: mouseenter ;  dur: 3000;"
-                animation__mouseenter_3="property: light.intensity; to: 1; startEvents: mouseenter ;  dur: 3000;"
-                animation__mouseenter_4="property: color; to : red; startEvents: mouseenter ;  dur: 3000;"
+                animation__mouseenter_2="property: components.light.light.color; type:color; to : #880808; startEvents: mouseenter ;  dur: 3000"
+                animation__mouseenter_3="property: components.light.light.intensity; type:intensity; to :1; startEvents: mouseenter ;  dur: 3000"
+                animation__mouseenter_4="property: components.material.material.color; type: color; to: #880808; startEvents: mouseenter; dur: 3000";
+                animation__mouseenter_5="property: scale;  to: 50 50 50; startEvents: mouseenter; dur: 3000";
                 animation__mouseleave_1="property: rotation; to: 0 0 0; startEvents: mouseleave ;  dur: 3000"
-                animation__mouseleave_2="property: light.color; to : white; startEvents: mouseleave ;  dur: 3000"
-                animation__mouseleave_3="property: light.intensity; to: 0.5; startEvents: mouseleave ;  dur: 3000"
-                animation__mouseleave_4="property: color; to : white; startEvents: mouseleave ;  dur: 3000"
-               ></a-sphere> 
+                animation__mouseleave_2="property: components.light.light.color; type:color; to : white; startEvents: mouseleave ;  dur: 3000"
+                animation__mouseleave_3="property: components.light.light.intensity; type:intensity; to : 0.5; startEvents: mouseleave ;  dur: 3000"
+                animation__mouseleave_4="property: components.material.material.color; type: color; to: white; startEvents: mouseleave; dur: 3000";
+                animation__mouseleave_5="property: scale;  to: 10 10 10; startEvents: mouseleave; dur: 3000"; 
+                ></a-entity>
+    
+                
+               
             <!-- Sky/Background-->
             <a-sky color="black"></a-sky>
 
