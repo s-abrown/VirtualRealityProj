@@ -15,6 +15,8 @@
             <a-assets>
                 <!--IMG -->
                 <img id='sol' src="assets/sol.jpg">
+                <img id='sol_Tessa' src="assets/sol_texture.jpg">
+                <img id='moon' src="assets/moon_texture.jpg">
                 <!--<img id="sky" src="360_0148.JPG" alt="monFond">-->
                 <img id="water" src="assets/water.gif">
 
@@ -69,15 +71,21 @@
                     <a-cursor></a-cursor>
                 </a-camera>
 
-                <!-- Light source (Change if needed)-->
-                <a-light type="ambient" color="#445451"></a-light>
-                <a-light type="point" intensity="2" position="2 4 4"></a-light>
-
+                <a-sphere r="1000" src="#moon" scale="10 10 10" opacity="1" position="200 200 200" color="white" light="type:ambient; intensity:0.5; color: white" 
+                animation__mouseenter_1="property: rotation; to: 0 180 0; startEvents: mouseenter ;  dur: 3000;"
+                animation__mouseenter_2="property: light.color; to : red; startEvents: mouseenter ;  dur: 3000;"
+                animation__mouseenter_3="property: light.intensity; to: 1; startEvents: mouseenter ;  dur: 3000;"
+                animation__mouseenter_4="property: color; to : red; startEvents: mouseenter ;  dur: 3000;"
+                animation__mouseleave_1="property: rotation; to: 0 0 0; startEvents: mouseleave ;  dur: 3000"
+                animation__mouseleave_2="property: light.color; to : white; startEvents: mouseleave ;  dur: 3000"
+                animation__mouseleave_3="property: light.intensity; to: 0.5; startEvents: mouseleave ;  dur: 3000"
+                animation__mouseleave_4="property: color; to : white; startEvents: mouseleave ;  dur: 3000"
+               ></a-sphere> 
             <!-- Sky/Background-->
             <a-sky color="black"></a-sky>
 
             <!--Ground-->    
-                <a-plane id="gros-cercle-vert" color="#07440A" position="0 0 0.4" rotation="-90 0 0" width="300" height="300" sound="src:#herbe; refDistance:50; volume:0.2">
+                <a-plane id="gros-cercle-vert" src="#sol_Tessa" repeat="150 150" position="0 0 0.4" rotation="-90 0 0" width="300" height="300" sound="src:#herbe; refDistance:50; volume:0.2">
                     
                 <!--some firefly -->
                 <a-sphere r="1" opacity="0.5" position="-4.792 32.057 0.6" scale="0.01 0.01 0.01" color="	#0FFF50" light="type:spot; angle:30.0; intensity:0.3; color:#0FFF50"
@@ -167,7 +175,7 @@
         </a-plane>
 
                 <!--Swamp-->
-                <a-circle color="#AE9E4D" position="0 0.5 -39.5"  rotation="-90 0 0" radius="15">
+                <a-circle src="#sol_Tessa" repeat="25 25" position="0 0.1 -39.5"  rotation="-90 0 0" radius="15">
                     <!--Swamp color="#429abd" -->
                     <a-circle src="#water" color="#748500" position="0.7514 -3.9257 0.009" radius="7" material="" geometry=""></a-circle>
                     <a-circle src="#water" color="#748500" position="-4.89319 -3.9257 0.009" radius="7" material="" geometry="" sound="src:#etang; autoplay: true; volume: 0.5; refDistance :1; loop: true"></a-circle>
@@ -294,12 +302,13 @@
                     <a-gltf-model scale="1 1 1" src="#tron" position="-12.539 -1.581 0.287" rotation="90 0 0" ></a-gltf-model>
                     
                     <!-- Campfire -->
-                     <a-gltf-model scale="1 1 1" src="#campfire" position="" rotation="90 0 0" animation-mixer="" gltf-model="assets/campfire/scene.gltf" "></a-gltf-model>
+                     <a-gltf-model scale="0.1 0.1 0.1" src="#campfire" position=" 5.903 8.762 0.15 " rotation="90 0 0" animation-mixer="" gltf-model="assets/campfire/scene.gltf" light="type:spot; angle:180; distance:1.410; decay:1.020; intensity:10; color: #e25822"
+                     animation="property: light.intensity; to: 5 ; dir: alternate; loop: true; dur: 500" ></a-gltf-model>
 
                     <!--Alley-->
                     <a-plane id="path" src="#sol" repeat="1 10" position="0 0.5 -21.1" rotation="-90 0 0" width="2" height="7" sound="src:#gravier; refDistance:10; volume:0.2">
                 <!--Rocks-->
-                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="1 0 0" rotation="0 90 90" ></a-gltf-model>
+                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres"  position="1 0 0" rotation="0 90 90" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="-1 1 0" rotation="49.90691578707523 98.04453790278647 90.00021045914971" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="1 3 0" rotation="9.90691578707523 69.04453790278647 90.00021045914971" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="-1 -1 0" rotation="69.90691578707523 38.04453790278647 90.00021045914971" ></a-gltf-model>
@@ -326,15 +335,7 @@
         AFRAME.registerComponent('postion-player', {
             tick: function () {
                 let camera_position = this.el.object3D.position;
-                let path_sound  = document.getElementById("path")
-                let grass_sound  = document.getElementById("gros-cercle-vert")
-                if (camera_position.x <= 1 && camera_position.x >= -1 && camera_position.z <= 5 && camera_position.z >= -25 ) {
-                grass_sound.components.sound.stopSound()
-                path_sound.components.sound.playSound()
-                } else {
-                path_sound.components.sound.stopSound()
-                grass_sound.components.sound.playSound()
-                }
+
                 // Boundaries, terrain
                 if (camera_position.x > 149){
                     camera_position.x = 149
