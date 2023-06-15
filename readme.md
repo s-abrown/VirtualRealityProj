@@ -33,6 +33,3 @@ Le développement a été partagé équitablement entre nous.
 
 ## Contexte de développement
 Ce projet a été développé dans le cadre du cours "Réalité virtuelle et augmentée" (printemps 2022) enseigné par le Prof. Isaac Pante (SLI, Lettres, UNIL).
-
-## Links
-- Version anglais : 
