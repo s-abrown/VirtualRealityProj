@@ -17,7 +17,6 @@
                 <img id='sol' src="assets/sol.jpg">
                 <img id='sol_Tessa' src="assets/sol_texture.jpg">
                 <img id='moon' src="assets/moon_texture.jpg">
-                <!--<img id="sky" src="360_0148.JPG" alt="monFond">-->
                 <img id="water" src="assets/water.gif">
 
                 <!--GLTF-->
@@ -52,8 +51,6 @@
                 <a-assets-item id="lantern" src="assets/lantern/scene.gltf"></a-assets-item>
                 <a-assets-item id="campfire" src="assets/campfire/scene.gltf"></a-assets-item>
 
-
-
                 <!--audio-->
                 <audio id="gravier" src="assets/Sounds/Pas sur gravier.mp3" preload="auto"></audio>
                 <audio id="herbe" src="assets/Sounds/pas dans l'herbe.mp3" preload="auto"></audio>
@@ -63,6 +60,7 @@
                 <audio id="canard" src="assets/Sounds/canard.mp3" preload="auto"></audio>
                 <audio id="grenouilles" src="assets/Sounds/grenouilles.mp3" preload="auto"></audio>
                 <audio id="toilette" src="assets/Sounds/chasse d'eau.mp3" preload="auto"></audio>
+                <audio id="firecamp" src="assets/Sounds/campfire.mp3" preload="auto"></audio>
 
             </a-assets>
              <!--basics-->
@@ -70,6 +68,8 @@
                 <a-camera id="camera" postion-player position="0 1.6 -20" >
                     <a-cursor></a-cursor>
                 </a-camera>
+
+                <!-- Sky/Background-->
                 <a-entity geometry="primitive: sphere" 
                 r="1000" 
                 scale="10 10 10" 
@@ -89,10 +89,7 @@
                 animation__mouseleave_5="property: scale;  to: 10 10 10; startEvents: mouseleave; dur: 3000"; 
                 ></a-entity>
     
-                
-               
-            <!-- Sky/Background-->
-            <a-sky color="black"></a-sky>
+                <a-sky color="black"></a-sky>
 
             <!--Ground-->    
                 <a-plane id="gros-cercle-vert" src="#sol_Tessa" repeat="150 150" position="0 0 0.4" rotation="-90 0 0" width="200" height="300" sound="src:#herbe; refDistance:50; volume:0.2">
@@ -266,14 +263,7 @@
                     <a-gltf-model scale="0.0015 0.0015 0.0015" src="#frog_and_lilies" position="-3.93223 -2.624 0.12034" rotation="38.773 -91.138 -90.713" animation-mixer="" gltf-model="assets/frog_and_lilies/scene.gltf"></a-gltf-model>
                     <!-- Fox -->
                     <a-gltf-model scale="0.008 0.008 0.008" src="#fox" position="8.78328 12.83883 0.05748" rotation="26.59440901879229 -90.00021045914971 -90.00021045914971" animation-mixer="" gltf-model="assets/fox/scene.gltf"></a-gltf-model>
-                    <!--Grass0-->
-                     <!-- <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-1.2706 -11.08365 -0.05751" rotation="0 90 90"></a-gltf-model>
-                    <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-1.48188 -10.90038 0" rotation="0 90 90"></a-gltf-model>
-                    <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-12.02885 -0.62371 -0.07509" rotation="0 90 90"></a-gltf-model>
-                    <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="2.91849 -11.87523 -0.06499" rotation="0 90 90" ></a-gltf-model>
-                    <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="3.46596 -13.41119 -0.08412" rotation="0 90 90" ></a-gltf-model>
-                    <a-gltf-model scale="0.005 0.005 0.005" src="#grass0" position="3.34906 -13.411 -0.04344" rotation="0 90 90" ></a-gltf-model>
-                    <a-gltf-model scale="0.005 0.005 0.005" src="#grass0" position="4.94281 -10.40724 -0.05111" rotation="0 90 90"></a-gltf-model> -->
+
                     <!--Grass2-->
                     <a-gltf-model scale="2.9 2.9 2.9" src="#grass2" position="-2.581 12.843 -0.01002" rotation="-56.51140029154823 -90.00021045914971 -90.00021045914971"></a-gltf-model>
                     <a-gltf-model scale="2.9 2.9 2.9" src="#grass2" position="-14.02298 -2.00429 -0.022" rotation="-51.233313082803086 90.00021045914971 90.00021045914971"></a-gltf-model>
@@ -329,25 +319,19 @@
                     <a-gltf-model scale="1 1 1" src="#tron" position="-12.539 -1.581 0.287" rotation="90 0 0" ></a-gltf-model>
                     
                     <!-- Campfire -->
-                     <a-gltf-model scale="0.1 0.1 0.1" src="#campfire" position=" 5.903 8.762 0.15 " rotation="90 0 0" animation-mixer="" gltf-model="assets/campfire/scene.gltf" light="type:spot; angle:180; distance:1.410; decay:1.020; intensity:10; color: #e25822"
-                     animation="property: light.intensity; to: 5 ; dir: alternate; loop: true; dur: 500" ></a-gltf-model>
+                     <a-gltf-model scale="0.1 0.1 0.1" src="#firecamp" position=" 5.903 8.762 0.15 " rotation="90 0 0" animation-mixer="" gltf-model="assets/campfire/scene.gltf" light="type:spot; angle:180; distance:1.410; decay:1.020; intensity:10; color: #e25822"
+                     animation="property: light.intensity; to: 5 ; dir: alternate; loop: true; dur: 500" sound="src:#firecamp; autoplay: true; volume: 2; refDistance :2; loop: true"></a-gltf-model>
 
                     <!--Alley-->
-                    <a-plane id="path" src="#sol" repeat="1 10" position="0 0.5 -21.1" rotation="-90 0 0" width="2" height="7" sound="src:#gravier; refDistance:10; volume:0.2">
+                    <a-plane id="path" src="#sol" repeat="1 10" position="0 0.5 -21.1" rotation="-90 0 0" width="2" height="7">
                 <!--Rocks-->
                  <a-gltf-model scale="0.5 0.5 0.5" src="#pierres"  position="1 0 0" rotation="0 90 90" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="-1 1 0" rotation="49.90691578707523 98.04453790278647 90.00021045914971" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="1 3 0" rotation="9.90691578707523 69.04453790278647 90.00021045914971" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="-1 -1 0" rotation="69.90691578707523 38.04453790278647 90.00021045914971" ></a-gltf-model>
                 <a-gltf-model scale="0.5 0.5 0.5" src="#pierres" position="-1 6 0" rotation= "29.90691578707523 26.04453790278647 90.00021045914971" ></a-gltf-model>    
-                <!--Grass0 LIKELY TO BE UNUSABLE ASSETS -->
-                 <!-- <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-1.1 6 0" rotation="0 90 90"></a-gltf-model>
-                <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="0.8 2 0" rotation="0 90 90"></a-gltf-model>
-                <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="0.8 -1 0" rotation="-56.51140029154823 -90.00021045914971 -90.00021045914971"></a-gltf-model>
-                <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-1.1 3.611 0" rotation="-51.233313082803086 90.00021045914971 90.00021045914971"></a-gltf-model>
-                <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="0.8 4.038 0" rotation="-51.233313082803086 90.00021045914971 90.00021045914971"></a-gltf-model>
-                <a-gltf-model scale="0.01 0.01 0.01" src="#grass0" position="-1.1 0.521 0" rotation="-51.233313082803086 90.00021045914971 90.00021045914971"></a-gltf-model> -->
-                </a-plane>
+               
+            </a-plane>
                 <a-gltf-model src="#pierres" position="0 1 -17.5" scale="5 5 5" rotation="0 90 0" sound="src:#foret; autoplay: true; volume: 4; refDistance :5; loop: true"></a-entity> 
         
         </a-scene>
