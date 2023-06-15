@@ -26,7 +26,7 @@ Le développement a été partagé équitablement entre nous.
 ![](assets/ReadMe/ReadMe4.png)
 ![](assets/ReadMe/ReadMe2.png)
 
-## **outils utilisés**
+## **Outils utilisés**
 - Ce projet a été réalisé en utilisant A-Frame et Visual Studio Code.
 
 - Ce projet est le fruit d'un travail collaboratif réalisé principalement via Discord, mais aussi en personne avec l'extension Live Share de Visual Studio Code.
