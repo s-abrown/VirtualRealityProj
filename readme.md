@@ -1,7 +1,7 @@
 ![](assets/ReadMe/ReadMe1.png)
 
 
-# b.I.A.s
+# This is a swamp
 
 ## Description du projet
 Ce projet est une scène en réalité virtuelle qui s'inspire de l'étang du film Shrek. Le·la visteur·euse est accueilli·e par l'Âne qui l'attend sur le perron de la maison au milieu d'une forêt lors d'une soirée de pleine lune... Iel peut ensuite se balader autour de l'étang, afin d'y découvrir quelques éléments iconiques du film d'animation.
